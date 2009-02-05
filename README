@@ -1,0 +1,13 @@
+ScalarTypes
+===========
+
+This plugin provides value objects for modelling attributes 
+such as length, area, volume and weight. Useful when used 
+with ActiveRecord::Aggregations, e.g:
+
+  composed_of :weight, :mapping => [ %w(weight_amount amount), %w(weight_units units)]
+
+Where possible when value objects are multiplied together the appropriate
+object is returned, e.g. length * length = area
+
+Copyright (c) 2008 Andrew White, released under the MIT license
